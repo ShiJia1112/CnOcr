@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipts</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='show.css') }}">
+</head>
+<body>
+    <h1>Receipts</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Recognized Text</th>
+            <th>Recognition Date</th>
+            <th>Uploaded Image</th>
+            <th>QR Code</th>
+        </tr>
+        {% for receipt in receipts %}
+        <tr>
+            <td>{{ receipt.id }}</td>
+            <td>{{ receipt.recognized_text }}</td>
+            <td>{{ receipt.recognition_date }}</td>
+            <td><img src="data:image/jpeg;base64,{{ receipt.uploaded_image }}" alt="Image" width="100"></td>
+            <td><img src="data:image/png;base64,{{ receipt.qrcode }}" alt="QR Code" width="100"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

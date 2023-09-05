@@ -1,0 +1,27 @@
+/* 添加一些全局样式 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 设置图片样式 */
+img {
+    max-width: 100px;
+    height: auto;
+}

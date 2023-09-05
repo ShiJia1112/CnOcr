@@ -1,0 +1,39 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>OCR 结果</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>OCR 结果</h1>-->
+<!--    <p>识别结果：</p>-->
+<!--    <ul>-->
+<!--        {% for line in text %}-->
+<!--            <li>{{ line.text }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--    <p>生成的二维码：</p>-->
+<!--    <img src="data:image/png;base64,{{ qr_image_data }}" alt="QR Code">-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR 结果</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>OCR 结果</h1>
+        <p class="result-title">识别结果：</p>
+        <ul class="result-list">
+            {% for line in text %}
+                <li>{{ line.text }}</li>
+            {% endfor %}
+        </ul>
+        <p class="qr-title">生成的二维码：</p>
+        <img src="data:image/png;base64,{{ qr_image_data }}" alt="QR Code" class="qr-code">
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Images</title>
+</head>
+<body>
+    <h1>展示存储的图片</h1>
+    {% for image_data in image_data_list %}
+        <img src="data:image/jpeg;base64,{{ image_data[0] }}" alt="Image">
+    {% endfor %}
+</body>
+</html>
